@@ -1,0 +1,22 @@
+# ant beta:agents create < agents/daily_report.agent.yaml --transform id -r
+# 本書の通しの題材：指定サイトを巡回して Markdown の日報を書くエージェント
+name: Daily Site Reporter
+description: 指定された Web ページ群を巡回し、前回からの変化と要点を Markdown 日報にまとめる
+model:
+  id: claude-opus-5
+  effort: medium
+system: |
+  あなたは Web サイト巡回担当です。指示されたページを web_fetch で取得し、
+  日本語の Markdown 日報を /mnt/session/outputs/report.md に書きます。
+  日報の構成: 1) 今日の要点（3行以内） 2) ページごとの変化・新着 3) 要確認事項。
+  取得できなかったページは、その旨と理由を記録して先に進みます。
+  推測で内容を補わないでください。
+tools:
+  - type: agent_toolset_20260401
+    default_config:
+      enabled: true
+    configs:
+      - name: web_search
+        enabled: false
+      - name: web_fetch
+        max_content_tokens: 20000

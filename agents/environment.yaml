@@ -1,0 +1,7 @@
+# ant beta:environments create < agents/environment.yaml
+name: ma-guide-env
+description: 本書のサンプル共通。外向き通信は無制限（本番では limited を検討）
+config:
+  type: cloud
+  networking:
+    type: unrestricted

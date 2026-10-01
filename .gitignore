@@ -1,0 +1,6 @@
+.env
+.ma_ids.json
+__pycache__/
+*.pyc
+outputs/
+.venv/

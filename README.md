@@ -1,5 +1,7 @@
 # managed-agents-jp-starter
 
+> 解説: [Claude Managed Agents 実践ガイド（Zenn 本・第 1〜3 章無料）](https://zenn.dev/persimmoq/books/claude-managed-agents-jp) ／ [30 分で定期巡回エージェントを動かす（記事）](https://zenn.dev/persimmoq/articles/claude-managed-agents-daily-report)
+
 Zenn 本『Claude Managed Agents 実践ガイド』の付属コードです。
 Claude Managed Agents（Anthropic がエージェントループとサンドボックスを運用する、サーバー不要のエージェント基盤）を Python で動かす最小構成を、章ごとのスクリプトにしてあります。
 
